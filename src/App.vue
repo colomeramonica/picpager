@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <img src="@/assets/imgs/camera.jpg" alt="Smile for the camera" height="60" width="80">
     <h1><i>PicPager</i></h1>
     <hr />
     <div class="container">
@@ -25,7 +26,7 @@
               <textarea placeholder="Mensagem" name="comment__msg"
               class="form-control" v-model="comment_msg" ></textarea>
             </p>
-            <button type="submit" v-on:click="addComment" class="float-left btn btn-primary">Novo Comentário</button>
+            <button type="submit" v-on:click="addComment" class="float-left btn btn-outline-primary">Adicionar Comentário</button>
           </div>
         </div>
       </div>
@@ -79,6 +80,7 @@ export default {
       var file;
       if (typeof(e) != 'undefined')
         file = e.target.files[0];
+        
       
     },
     removePost(id) {
